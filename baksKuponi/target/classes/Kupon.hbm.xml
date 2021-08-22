@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "baksKuponi.Kupon" table = "kuponi">
+      
+<!--       <meta attribute = "class-description"> -->
+<!--       	Ova tabela sadrzi informacije o svim kuponima -->
+<!--       </meta> -->
+      
+      <id name = "id" type = "int" column = "id">
+<!--          <generator class="native"/> -->
+      </id>
+      <property name="iskoriscen" column = "iskoriscen" type="boolean"/>
+      <property name = "crven" column = "crven" type = "boolean"/>
+      <property name = "naslov" column = "naslov" type = "string"/>
+      <property name = "kratakOpis" column = "kratak_opis" type = "string"/>
+      <property name = "dugOpis" column = "dug_opis" type = "string"/>
+      <property name = "brojKoriscenjaTekst" column = "broj_koriscenja_tekst" type = "string"/>
+      <property name = "brojKoriscenja" column = "broj_koriscenja" type = "int"/>
+      <property name = "brojKoriscenjaMaks" column = "broj_koriscenja_maks" type = "int"/>
+   </class>
+</hibernate-mapping>
